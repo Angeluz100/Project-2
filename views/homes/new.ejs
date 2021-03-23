@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/homes" method="POST">
+  <label>Type of Real Estate:</label>
+  <input type="text" name="typeOfRealEstate">
+  <label>street Address:</label>
+  <input type="text" name="streetAddress">
+  <label>City:</label>
+  <input type="text" name="city">
+  <label>Year Built:</label>
+  <input type="text" name="builtYear">
+  <label>Price</label>
+  <input type="text" name="price">
+  <input type="submit" value="New Home">
+</form>
+
+<%- include('../partials/footer') %>

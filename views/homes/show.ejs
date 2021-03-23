@@ -1,0 +1,86 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <a href="/homes/edit">Edit this Home</a>
+  <div>Type of Real Estate: </div>
+  <div><%= home.typeOfRealEstate %></div>
+  <div>Built Year: </div>
+  <div><%= home.builtYear %></div>
+  <div>Street Address: </div>
+  <div><%= home.streetAddress %></div>
+  <div>City </div>
+  <div><%= home.city %></div>
+  <div>Price</div>
+  <div><%= home.price %></div>
+  
+  <div> Feature:</div>
+  <ul>
+    <% home.feature.forEach(function (i) { %>
+      <li><%= i.feature %></li>
+    <% }); %>
+  </ul>
+</section>
+
+<form action="/homes/<%= home._id %>/informations" method="post" id="add-to-feature">
+  <select name="informationId">
+    <% informations.forEach( function(i) { %>
+      <option value="<%= i._id %>"><%= i.feature %></option>
+    <% }); %>
+  </select>
+  <button type="submit">Add Feature</button>
+</form>
+
+<h2>Reviews</h2>
+
+<% if (home.reviews.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Review</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--First let's set up a total variable -->
+      <% let total = 0 %>  
+      <% home.reviews.forEach(function(r) { %>
+         <!-- We'll aggregate the total ratings -->
+        <% total += r.rating %>
+        <tr>
+          <td><%= r.createdAt.toLocaleDateString() %></td>
+          <td><%= r.content %></td>
+          <td><%= r.rating %></td>
+        </tr>
+      <% }); %>
+      <!-- Divide total by num reviews to show our average rating 👇😄 -->
+      <tr>
+        <td colspan="2"></td>
+        <td><strong><%= (total / home.reviews.length).toFixed(1) %></strong></td>
+      </tr>
+    </tbody>
+  </table>
+<% } else { %>
+  <h5>No Reviews Yet</h5>
+<% } %>
+
+<h2>Add a review:</h2>
+<form
+  id="add-review-form"
+  method="POST"
+  action="/homes/<%= home._id %>/reviews"
+>
+  <label>Review:</label>
+  <textarea name="content"></textarea>
+  <label>Rating:</label>
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <input type="submit" value="Add Review" />
+</form>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<p>Please first ensure that the feature is not in the dropdown
+    <select>
+        <% informations.forEach(function(i) { %>
+            <option><%= i.feature %></option>
+        <% }) %>
+    </select>
+</p>
+<form action="/informations" method="post" id="add-information-form">
+    <label>Feature:</label>
+    <input type="text" name="feature">
+    
+    <input type="submit" value="Add Feature">
+</form>
+<%- include('../partials/footer') %>

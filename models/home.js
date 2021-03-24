@@ -19,7 +19,7 @@ const homeSchema = new Schema({
     required: true
   },
   builtYear: {
-    type: String,
+    type: Number,
     default: function () {
       return new Date().getFullYear();
     }

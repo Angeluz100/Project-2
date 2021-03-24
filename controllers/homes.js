@@ -26,7 +26,7 @@ function show(req, res) {
 }
 
 function newHome(req, res) {
-  res.render("homes/new", { title: "add Home" });
+  res.render("homes/new", { title: "Add Home" });
 }
 
 function create(req, res) {
@@ -66,7 +66,7 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  Homes.findByIdAndUpdate(req.params.id, req.body, function(err, home) {
+  Home.findByIdAndUpdate(req.params.id, req.body, function(err, home) {
       res.redirect('/homes/' + req.params.id);
   });
 }

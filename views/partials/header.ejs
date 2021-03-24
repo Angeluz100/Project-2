@@ -9,10 +9,9 @@
 </head>
 <body>
   <nav>
-    <img src="/images/camera.svg">
-    <a href="/homes/new" <%- title === 'New House' ? 'class="active"' : '' %>>New House</a>
-    <a href="/homes" <%- title === 'All houses' ? 'class="active"' : '' %>>All Houses</a>
-    <a href="/informations/new" <%- title === 'Add information' ? 'class="active"' : '' %>>Add Information</a>
+      <a href="/homes" <%- title === 'All houses' ? 'class="active"' : '' %>>All Homes</a>
+    <a href="/homes/new" <%- title === 'New House' ? 'class="active"' : '' %>>New Home</a>
+    <a href="/informations/new" <%- title === 'Add information' ? 'class="active"' : '' %>>Add Features</a>
   </nav>
   <main>
     <h1><%= title %></h1>

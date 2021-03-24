@@ -2,20 +2,25 @@
 <table id="list">
   <thead>
     <tr>
-      <th>typeOfRealEstate:</th>
+      <th>Type of<br>Estate</th>
       <th>Built<br>Year</th>
-      <th></th>
+      <th>Description</th>
+      <th>Action</th>
     </tr>
-  </thead>
-  <tbody>
+</thead>
+<tbody class="idx">
     <% homes.forEach(function(h) { %>
-      <tr>
-        <td><%= h.typeOfRealEstate %></td>
-        <td><%= h.builtYear %></td>
-        <td><a href="/homes/<%= h._id %>">DETAILS</a></td>
-      </tr>
-      <% }); %>
-    </tbody>
-  </table>
-  
+        <tr>
+            <td><%= h.typeOfRealEstate %></td>
+            <td><%= h.builtYear %></td>
+            <td><a href="/homes/<%= h._id %>">DESCRIPTION</a></td>
+
+            <td><form action="/homes/<%= h._id %>?_method=DELETE" class="delete-form" method="post">
+                <button type="submit">X</button>
+            </form></td>         
+    </tr>
+    <% }); %>
+    </table>
+</tbody>
+
 <%- include('../partials/footer') %>

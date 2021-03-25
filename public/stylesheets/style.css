@@ -38,7 +38,7 @@
     align-items: center;
     background-color: #E8ECEB;
     padding: 20px;
-    /* overflow-y: scroll; */
+   
   }
   body > main h1:first-child {
     margin-bottom: 50px;
@@ -112,4 +112,3 @@
    
  
   
-  /* FORMS */

@@ -17,13 +17,14 @@ A simple web app that kepp track of houses visited by a buyer
 
 ## Screenshots
 
-![wireframe](./imgs/wireframe.png)
+![wireframe](./public/imgs/wireframe.png)
 
-![ERD] (./imgs/erd.png)
+![ERD](./public/imgs/erd.png)
 
-![final Result](./imgs/final-touch.png)
+![final Result](./public/imgs/final-touch.png)
+
 ## Getting started
-<!-- [click](https://angeluz100.github.io/Project-2/.) here to get started and see the app online!  -->
+[click](https://homes-tracker.herokuapp.com/homes) here to get started and see the app online! 
 
 ## Future Enhancements
 -Able to track more features

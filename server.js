@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const methodOverride = require ('method-override')
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 require('dotenv').config();
 require("./config/database");

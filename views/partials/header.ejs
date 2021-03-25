@@ -9,9 +9,9 @@
 </head>
 <body>
   <nav>
-      <a href="/homes" <%- title === 'All houses' ? 'class="active"' : '' %>>All Homes</a>
-    <a href="/homes/new" <%- title === 'New House' ? 'class="active"' : '' %>>New Home</a>
-    <a href="/informations/new" <%- title === 'Add information' ? 'class="active"' : '' %>>Add Features</a>
+      <a href="/homes" id="nav1" <%- title === 'All houses' ? 'class="active"' : '' %>>All Homes</a>
+    <a href="/homes/new" id="nav2" <%- title === 'New House' ? 'class="active"' : '' %>>New Home</a>
+    <a href="/informations/new" id="nav3" <%- title === 'Add information' ? 'class="active"' : '' %>>Add Features</a>
   </nav>
   <main>
     <h1><%= title %></h1>

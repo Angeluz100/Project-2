@@ -21,7 +21,7 @@ A simple web app that kepp track of houses visited by a buyer
 
 ![ERD] (./imgs/erd.png)
 
-<!-- ![final Result](./imgs/final-touch.png) -->
+![final Result](./imgs/final-touch.png)
 ## Getting started
 <!-- [click](https://angeluz100.github.io/Project-2/.) here to get started and see the app online!  -->
 

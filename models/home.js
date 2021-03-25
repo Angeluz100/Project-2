@@ -20,9 +20,6 @@ const homeSchema = new Schema({
   },
   builtYear: {
     type: Number,
-    default: function () {
-      return new Date().getFullYear();
-    }
   },
   price: {
     type: String,

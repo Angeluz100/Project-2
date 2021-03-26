@@ -1,6 +1,6 @@
 # Project 2
 
-A simple web app that keep track of houses visited by a buyer
+A simple web app that keegitp track of houses visited by a buyer
 
 ## technologies Used
 - Invision (wireframe)
@@ -12,7 +12,7 @@ A simple web app that keep track of houses visited by a buyer
 - Express
 - MongoDB 
 - Github Pages (for saving)
-- Heroku Pages (for depolyment)
+- Heroku Pages (for deployment)
 
 
 ## Screenshots

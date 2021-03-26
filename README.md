@@ -1,6 +1,6 @@
 # Project 2
 
-A simple web app that kepp track of houses visited by a buyer
+A simple web app that keep track of houses visited by a buyer
 
 ## technologies Used
 - Invision (wireframe)

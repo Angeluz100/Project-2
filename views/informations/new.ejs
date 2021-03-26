@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-<p>Please first ensure that the feature is not in the dropdown
-    <select>
+<p id="informations-page">Please first ensure that the feature is not in the dropdown
+    <select id="informations-drop">
         <% informations.forEach(function(i) { %>
             <option><%= i.feature %></option>
         <% }) %>

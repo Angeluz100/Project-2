@@ -1,17 +1,21 @@
-/* VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
+
+
 :root {
     box-sizing: border-box;
     font-family: Helvetica;
-    --bright-orange: #F18963;
-    --light-orange: #f5ac91;
-    --bright-green: #A0BE73;
-    --light-green: #c6d8ab;
-    --purple: #B67D9A;
+    color: rgb(202, 112, 9);
+
   }
   
   body {
-    font-family: helvetica;
-    margin: 0;
+      font-family: helvetica;
+      background-image: url('https://images.unsplash.com/photo-1604357209793-fca5dca89f97?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWFwfGVufDB8MXwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
     height: 100vh;
     display: flex;
     grid-template-rows: 50px 1fr;
@@ -20,38 +24,40 @@
       "main"
   }
   body > nav {
-      grid-area: nav;
-      background-image: url('https://images.unsplash.com/photo-1485628390555-1a7bd503f9fe?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YXJjaGl0ZWN0dXJlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
-      background-size: cover;
-      display: grid;
-    justify-content: flex-end;
+     grid-area: nav;
+     display: grid;
+     /* background-color: rgb(202, 112, 9); */
+     height: 100vh;
+    background-size: cover;
+    /* justify-content: flex-end; */
     align-items: center;
     padding: 0 20px 0 30px;
     font-weight: bolder;
+    font-size: 200%;
+    color: rgb(219, 114, 16);
   }
-
+  
   body > main {
       grid-area: main;
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background-color: #E8ECEB;
     padding: 20px;
-   
+    font-size: 20px;
   }
   body > main h1:first-child {
     margin-bottom: 50px;
   }
   nav > a {
-    color: black;
+    /* color: black; */
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
   }
   nav > a:hover {
-    color: white;
-    background-color: #424748;
+    color: black;
+    background-color: #e8edee;
   }
   #new-form {
     display: grid;
@@ -60,7 +66,8 @@
   }
 
 
-#new-form *,  #add-review-form *, #add-information-form * {
+  #new-form *,  #add-review-form *, #add-information-form * {
+    color: rgb(219, 114, 16);
     font-size: 20px;
     padding: 5px;
     border-radius: 5px;
@@ -71,11 +78,13 @@
     margin-left: auto;
   }
   table thead th {
+      color: blanchedalmond;
     justify-content: space-around;
     padding: 5px;
     border-bottom: 2px solid #424748;
   }
   table td {
+    color: blanchedalmond;
     padding: 10px;
     text-align: center;
   }
@@ -83,11 +92,13 @@
     background-color: white;
   }
   #show-page {
+    color:rgb(202, 112, 9);
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
   }
   #add-review-form, #add-performer-form {
+    color:rgb(202, 112, 9);
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
@@ -101,14 +112,24 @@
   
  
   h1 {
-    font-family: 'Oswald';
+    font-family: 'Monoton';
     font-weight: 500;
-    color: black;
-    border-bottom: 2px solid purple;
+    color: rgb(219, 114, 16);
+    border-bottom: 2px solid rgb(17, 7, 156);
   } 
    .delete-form button {
     color: red;
    }
-   
- 
+   #informations-page {
+       color: blanchedalmond;
+       font-size: 20px;
+   }
+   #informations-drop {
+       color: rgb(219, 114, 16);
+       font-size: 15px;
+   }
+   h2, #add-to-feature{
+    color:rgb(202, 112, 9);
+   }
+
   

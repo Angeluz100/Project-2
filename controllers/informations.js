@@ -4,7 +4,7 @@ const Home = require('../models/home');
 function newInformation(req, res) {
     Information.find({}, function(err, informations) {
     res.render('informations/new', {
-        title: 'Add information',
+        title: 'Add Information',
         informations
        })
     });

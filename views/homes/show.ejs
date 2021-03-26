@@ -1,16 +1,18 @@
 <%- include('../partials/header') %>
 
-<a href="/homes/<%= home._id %>/edit">Edit this Home</a>
+<form action="/homes/<%= home._id %>/edit" >
+    <input id="add-to-feature" type="submit" Value="Edit This Home">
+</form>
 <section id="show-page">
   <div>Type of Real Estate: </div>
   <div><%= home.typeOfRealEstate %></div>
-  <div>Built Year: </div>
+  <div>Year Built: </div>
   <div><%= home.builtYear %></div>
   <div>Street Address: </div>
   <div><%= home.streetAddress %></div>
-  <div>City </div>
+  <div>City:</div>
   <div><%= home.city %></div>
-  <div>Price</div>
+  <div>Price:</div>
   <div><%= home.price %></div>
   
   <div> Feature:</div>
@@ -21,16 +23,16 @@
     <% }); %>
   </ul>
 
-<form action="/homes/<%= home._id %>/informations" method="post" id="add-to-feature">
-  <select name="informationId">
+<form action="/homes/<%= home._id %>/informations" method="post">
+  <select id="add-to-feature" name="informationId">
     <% informations.forEach( function(i) { %>
-      <option value="<%= i._id %>"><%= i.feature %></option>
+      <option id="add-to-feature" value="<%= i._id %>"><%= i.feature %></option>
     <% }); %>
   </select>
-  <button type="submit">Add Feature</button>
+  <button id="add-to-feature" type="submit">Add Feature</button>
 </form>
 
-<h2>Feedbacks</h2>
+<h2>Feedback</h2>
 
 <% if (home.reviews.length) { %>
   <table>
